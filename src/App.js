@@ -1,17 +1,21 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Header from './Header.js'
-import Footer from './Footer';
 
 
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="app">
       <div>
-        <Header />
+        <header>
+          <img src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/07/door-company-logo.jpg" />
+        </header>
+        <nav>
+          <div>Message</div>
+        </nav>
+        <div>
 
-        <Footer />
+        </div>
       </div>
     </div>
 

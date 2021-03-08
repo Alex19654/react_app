@@ -1,3 +1,6 @@
 div {
   font-size: 45px;
 }
+.app-wrapper {
+  display: grid;
+}
