@@ -1,0 +1,16 @@
+.dialogs {
+	display: grid;
+	grid-template-columns: 2fr 10fr;
+}
+
+.item a {
+	padding: 20px;
+	color: azure;
+	text-decoration: none;
+}
+
+
+
+.message {
+	padding: 20px;
+}
