@@ -1,5 +1,6 @@
 import post from "./MyPosts.module.css";
 import Post from "./Post/Post";
+import React from 'react';
 
 
 
@@ -7,16 +8,28 @@ import Post from "./Post/Post";
 
 const MyPosts = (props) => {
 
-	let PostElement = props.PostData.map( function(post){
+	let PostElement = props.PostData.PostData.map( function(post){
 		return <Post message={post.message} likes={post.likes} />;
 	});
+
+	let newPostElement = React.createRef();
+
+	let onButton = () => {
+		let Hey = newPostElement.current.value;
+		props.addPost(Hey);
+		newPostElement.current.value = '';
+	};
+
+	let onPostChange = () => {
+		props.updatePost(newPostElement.current.value);
+	};
 
 	return (
 		<div>
 			My posts
 			<div>
-				<textarea></textarea>
-				<button>Add post</button>
+				<textarea onChange={onPostChange} ref={newPostElement} value={props.PostData.newPostText} />
+				<button onClick={ onButton }>Add post</button>
 			</div>
 			<div>
 				All posts
